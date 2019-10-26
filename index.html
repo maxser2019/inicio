@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Maxser</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1ee551fa39.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <header>
+        <h1 class="logo"><a href="#">MAXSER</a></h1>
+        <h2 class="logo1"><a href="#">tecnologia sin limites</a></h2>
+        <div class="colorwsp">
+            <i class="colorwsp fab fa-whatsapp"></i>
+            <i class="colorwsp fab fa-whatsapp-square"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-youtube-square"></i>
+            <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+       <div id="mostrar-nav"><i class="fas fa-bars"></i></div>
+        <nav>
+          <ul class="menu">
+            <li><a herf="#"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a herf="#"><i class="fas fa-user-cog"></i> Servicios</a></li>
+            <li><a herf="#"><i class="fas fa-photo-video"></i> Galeria</a></li>
+            <li><a herf="#"><i class="fas fa-user-tie"></i> Asesoria</a></li>
+          </ul>
+        </nav> 
+    </header>
+        <section class="inicio">
+            <div class="inicio-contenedor">
+                   <div class="texto">
+                       <h2>"SOMOS UNA EMPRESA DE INFORMÁTICA  CON MAS DE 10 AÑOS DE EXPERIENCIA & GALARDONADO CONTINUAMENTE A LA IMAGEN Y PRESTIGIO EMPRESARIAL"</h2>
+                       <p>SEGUÍNOS EN NUESTRA REDES SOCIALES</p>
+                   </div>
+                   <div class="formulario">
+                   <h2>Y PODEMOS AYUDARTE,</h2>
+                   <p>déjanos tu consulta o duda y en breve nos pondremos en contacto.</p>
+                    <form action="php/enviar.php" method="post">
+                        <label for="nombre">Nombre o Empresa</label>
+                        <input type="text" required placeholder="  Ingrese su nombre" name="nombre" id="nombre">
+                        <label for="telefono">Teléfono</label>
+                        <input type="number" required placeholder="  Ingrese su número" name="telefono" id="telefono">
+                        <label for="mail">Correo</label>
+                        <input type="email" required placeholder="  Ingrese su correo" name="mail" id="mail">
+                        <label for="mail">Dirigido a</label>
+                        <select name="select" required>
+                         <option value="">Seleccionar</option>
+                          <option value="value1">administracion@maxser.com.ar</option> 
+                          <option value="value2">empresas@maxser.com.ar</option>
+                          <option value="value3">ventas@maxser.com.ar</option>
+                          <option value="value4">serviciotecnico@maxser.com.ar</option>
+                          <option value="value5">marketing@maxser.com.ar</option>
+                          <option value="value6">sugerencias@maxser.com.ar</option>
+                        </select>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" required placeholder=" Escribe tu mensaje" name="mensaje"></textarea>
+                        <input type="submit" name="Enviar">
+                    </form>
+                </div>
+            </div>
+        </section>
+    <section class="servicio" id="servicio">
+        <div class="cards">
+            <div class="card">
+                <h2>Servicio Tecnico</h2>
+            </div>
+            <div class="card">
+                <h2>Accesorios Gamming</h2>
+            </div>
+            <div class="card">
+                <h2>Impresoras y complemetos</h2>
+            </div>
+        </div>
+    </section>
+    <section class="gelaria" id="galeria">
+        
+    </section>
+    <section class="asesoria" id="aseroria">
+        <img src="./img/20180925_114137.jpg" alt="">
+         <div class="texto1">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nulla, repellendus corporis voluptatum minus ipsum explicabo vitae iste delectus esse reiciendis aliquam laudantium! Asperiores a magni ipsum molestiae reiciendis, eum voluptas neque doloribus non. Odio sequi qui voluptatem ut fugiat ab numquam atque sed nobis aliquam vel sint.</p>
+    </div>
+    </section>
+    <hr>
+    <footer>
+        <ul >
+           <li>Menu</li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#servicio">Servicio</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#asesoria">Asesoria</a></li>
+        </ul>
+        <div class="texto2">
+        <h3>Derechos de autor revervados @Maxser</h3>
+        <h4>Seguinos en nuestras redes.</h4>
+        </div>
+    </footer>
+    <hr>
+    <script src="js/mostrar-nav.js"></script>
+</body>
+</html>
