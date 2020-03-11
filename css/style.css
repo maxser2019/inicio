@@ -53,21 +53,26 @@ h2{
     color: #fff;
     font-weight: 75;
 }
-span{
+.logo > span{
     letter-spacing: 0px;
 }
 /*MENU*/
-nav{
+.menu{
     display: flex;
+}
+.navOpen{
+    display: flex;
+}
+nav{
+    display: none;
     flex-direction: column;
-    align-content: center;
     justify-content: center;
 }
 nav ul{
     display: flex;
-    flex-direction: row;
 }
 nav ul li{
+    font-size: 1.25em;;
     color: #fff;
     padding: 0 5px;
     font-family: sans-serif;
@@ -76,17 +81,110 @@ nav ul li:hover{
     transition: ease all;
     color: #ff6900;
 }
-@media (max-width: 674px){
-    nav{
-        display: none;
+/*BOTON MENU*/
+#hamburger{
+    padding-top: 10px;
+    height: 40px;
+    width: 40px;
+}
+#hamburger button{
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+}
+#hamburger button:focus{
+    outline: none;
+}
+#hamburger button span{
+    border-radius: 5px;
+    background-color: #fff;
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
+
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#hamburger button.open .top-line{
+    animation-name: top-line-animation;
+}
+#hamburger button.open .middle-line{
+    animation-name: middle-line-animation;
+}
+#hamburger button.open .bottom-line{
+    animation-name: bottom-line-animation;
+}
+#hamburger button .top-line{
+    animation-name: top-line-animation-close;
+}
+#hamburger button .middle-line{
+    animation-name: middle-line-animation-close;
+}
+#hamburger button .bottom-line{
+    animation-name: bottom-line-animation-close;
+}
+@keyframes top-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+}
+@keyframes bottom-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+}
+@keyframes middle-line-animation{
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+@keyframes top-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+    50%,100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes middle-line-animation-close{
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    50%,100%{
+        margin: 0px auto;
+        width: 60%;
+        opacity: 1;
+    }
+}
+@keyframes bottom-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+    50%,100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
     }
 }
 /*SECCIONES*/
 section{
     height: calc(100vh - 60px);
-    background-position: center;
-    object-fit: cover;
+    background-position: top center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .uno{
     background-image: url(../img/1.jpg);
@@ -98,11 +196,11 @@ section{
     background-image: url(../img/3.jpg);
 }
 .cuatro{
-    background-image: url(../img/1.jpg);
+    background-image: url(../img/4.jpg);
 }
 .cinco{
-    background-image: url(../img/2.jpg);
+    background-image: url(../img/5.jpg);
 }
 .seis{
-    background-image: url(../img/3.jpg);
+    background-image: url(../img/6.jpg);
 }

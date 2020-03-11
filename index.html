@@ -9,31 +9,40 @@
 <body>
     <header>
         <div class="logo">
-            <h1>MAXSER</h1>
-            <h2>tecnología sin límite<span>s</span></h2>
+            <!--<h1>MAXSER</h1>
+            <h2>tecnología sin límite<span>s</span></h2>-->
         </div>
-        <nav>
-            <ul>
-                <a href="#1">
-                    <li>Inicio</li>
-                </a>
-                <a href="#2">
-                    <li>¿Quienes somos?</li>
-                </a>
-                <a href="#3">
-                    <li>Nuestros Servicios</li>
-                </a>
-                <a href="#4">
-                    <li>Eventos</li>
-                </a>
-                <a href="#5">
-                    <li>Publicaciones</li>
-                </a>
-                <a href="#6">
-                    <li>Contacto</li>
-                </a>
-            </ul>
-        </nav>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <a href="#1">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="#2">
+                        <li>¿Quienes somos?</li>
+                    </a>
+                    <a href="#3">
+                        <li>Nuestros Servicios</li>
+                    </a>
+                    <a href="#4">
+                        <li>Eventos</li>
+                    </a>
+                    <a href="#5">
+                        <li>Publicaciones</li>
+                    </a>
+                    <a href="#6">
+                        <li>Contacto</li>
+                    </a>
+                </ul>
+            </nav>
+            <div id="hamburger">
+                <button>
+                    <span class="top-line"></span>
+                    <span class="middle-line"></span>
+                    <span class="bottom-line"></span>
+                </button>
+            </div>
+        </div>
     </header>
     <section id="1" class="uno">
 
@@ -56,5 +65,14 @@
     <footer>
         
     </footer>
+    <!--JavaScript-->
+    <script>
+        const nav = document.querySelector('#hamburger button');
+        const menu = document.querySelector('header nav');
+        nav.addEventListener('click', e => {
+            nav.classList.toggle('open');
+            menu.classList.toggle('navOpen');
+        })
+    </script>
 </body>
 </html>
